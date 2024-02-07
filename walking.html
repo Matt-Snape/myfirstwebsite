@@ -1,0 +1,194 @@
+<!-- ● Within the entirety of your site, you should have the following JavaScript functionality:
+○ Create a functional “Save for later” page for your website, where users can earmark articles, images, recipes, etc. in a personal folder to be able to go back and see them later.
+○ Each item/recipe/image, etc. must have the option to “Save for later”.
+○ When an item is added, an alert should tell the user how many items
+are in their “Save for later” folder.
+○ Create a new HTML page for the “Save for later” section, which allows
+the user to see what is in their folder.
+○ Create a form which allows a user to leave comments.
+○ Create forms to allow a user to “like” an item/article/etc.
+○ Create forms for if a person would like to contact you.
+○ Within the entirety of your site, you should have at least the following
+jQuery functionality:
+● A function which contains hiding/showing.
+● A drop-down menu.
+● Animation effects.
+● A function with chained effects. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <script
+      src="https://kit.fontawesome.com/99620259a0.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="scss/stylesheet.css" type="text/css" />
+    <title>Matt's world - Hello</title>
+  </head>
+  <body>
+    <!-- dropdown menu -->
+    <header class="main-header">
+      <nav class="nav main-nav">
+        <div class="dropdown">
+          <a href="#"><i class="fa-solid fa-bars fa-xl"></i></a>
+          <ul class="dropdown-content">
+            <li><a href="index.html">about me </a></li>
+            <li><a href="walking.html">walking </a></li>
+            <li><a href="contact.html">contact</a></li>
+            <li><a href="saved-for-later.html">saved for later</a></li>
+          </ul>
+        </div>
+      </nav>
+      <h1 class="main-title top">Matt's World</h1>
+    </header>
+
+    <main>
+      <h2 id="mainTitle">Walking</h2>
+      <h3 id="favoritePlacesTitle">A couple of my favourite places to walk</h3>
+      <section class="content-section container">
+        <div class="image-wrapper1 container" id="location1">
+          <img src="./Images/jodrellbank.png" alt="Jodrell Bank" />
+          <h3>My local - Sandbach</h3>
+          <p>
+            I live in the Town of Sandbach which is in Cheshire, a very flat
+            part of the country but with some excellent walks. Sandbach is a
+            small town full of history with the ancient crosses and cobbled
+            streets being a highlight. If you walk out of town you can follow
+            one of the many canals out into the countryside or head across
+            fields. One of the lcoal sights is Jodrell Bank which is a great
+            sight to walk around as well as a Centre of Scientific Interest. It
+            also hosts live music and a few years ago I saw one of my favourite
+            bands, Elbow, perform there live.
+          </p>
+          <a
+            href="https://www.sandbachfootpaths.org/wp-content/uploads/2017/04/winterley-and-golf-course-no-stile.pdf"
+            target="_blank"
+            class="btn-link"
+          >
+            A map of an excellent walk in Sandbach</a
+          >
+          <button class="save-btn" data-location="location1">
+            Save for Later
+          </button>
+        </div>
+
+        <div class="image-wrapper1 container" id="location2">
+          <img class="mainimage" src="./Images/roaches.png" alt="The Roaches" />
+          <h3>The Roaches - The Peak District</h3>
+          <p>
+            I was born on the egde of the Peak District National Park which is
+            Englands oldest national Park. Growing up I would cycle and walk
+            extensively in the Peaks but my favbourite area is The Roaches. The
+            is a rocky outcrop overlooking a reservoir with an excellent pub by
+            the water. You can either hike, boat or take climbing gear and take
+            on one of the many climbing routes which snake their way through the
+            crags.
+          </p>
+
+          <a
+            href="https://www.peakdistrict.org/the-roaches-walk/"
+            target="_blank"
+            class="btn-link"
+          >
+            A circular walk in the Roaches</a
+          >
+          <button class="save-btn" data-location="location2">
+            Save for Later
+          </button>
+        </div>
+      </section>
+      <!-- My quote of choice -->
+      <h2 id="quote">
+        <i>"An early morning walk is a blessing for the whole day"</i> - Henry
+        David Thoreau
+      </h2>
+      <button id="hideButton">
+        I don't like early mornings!! show/hide quote
+      </button>
+      <h3>A selection walks that I have enjoyed in the past</h3>
+      <!-- my table containing links to some walks i've done -->
+      <div class="table-container" id="location3">
+        <table class="custom-table">
+          <tr>
+            <th>Area</th>
+            <th>Distance</th>
+            <th>Terrain</th>
+            <th>
+              <button class="save-btn" data-location="location3">
+                Save table for Later
+              </button>
+            </th>
+          </tr>
+          <tr>
+            <td>Cornwall</td>
+            <td>5.44km</td>
+            <td>Coastal</td>
+            <td>
+              <div>
+                <a
+                  href="https://www.nationaltrust.org.uk/visit/cornwall/pentire/pentire-headland-walk"
+                  target="_blank"
+                  class="button-link"
+                >
+                  Route
+                </a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Snowdonia</td>
+            <td>12.1km</td>
+            <td>Mountainous</td>
+            <td>
+              <div>
+                <a
+                  href="https://www.crafnanthouse.com/blog/best-walking-routes-up-snowdon#:~:text=Crib%20Goch,-Total%20distance%3A%207&text=Crib%20Goch%20is%20not%20a,%2C%20exposed%20knife-edge%20ridge."
+                  target="_blank"
+                  class="button-link"
+                >
+                  Route
+                </a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Cheshire</td>
+            <td>2.7km</td>
+            <td>Meadows</td>
+            <td class="td-end">
+              <div>
+                <a
+                  href="https://www.nationaltrust.org.uk/visit/cheshire-greater-manchester/lyme/a-walk-to-the-lantern"
+                  target="_blank"
+                  class="button-link"
+                >
+                  Route
+                </a>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <h3>Leave a comment</h3>
+      <form id="commentForm">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" required />
+
+        <label for="comment">Your Comment:</label>
+        <textarea id="comment" rows="4" required></textarea>
+
+        <button type="button" id="submitBtn">Submit Comment</button>
+      </form>
+      <div class="comment-container" id="comments"></div>
+    </main>
+    <footer class="main-footer">
+      <h3>Matt's World</h3>
+      <a href="contact.html" class="btn-link">Subscribe for cat updates</a>
+    </footer>
+    <script src="Javascript/walking.js"></script>
+  </body>
+</html>

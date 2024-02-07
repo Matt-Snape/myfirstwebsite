@@ -1,0 +1,41 @@
+//animation styling for photo enlarge on hover
+.image-wrapper img {
+  transition: transform 0.1s ease-in-out;
+}
+
+.image-wrapper:hover img {
+  transform: scale(1.1); /* Adjust the scale factor as needed */
+}
+
+//styling for the like buttons
+.like-section {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  .like-btn {
+    background-color: #afd6f1;
+    color: #0b0b0b;
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+
+  .like-btn:hover {
+    background-color: #2980b9;
+  }
+
+  .like-count {
+    color: black;
+    margin-left: 5px;
+    font-weight: bold;
+  }
+}

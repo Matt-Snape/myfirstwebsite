@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100&family=Ubuntu:wght@300&display=swap");
+@import "./_comments";
+@import "./_walking";
+@import "./_dropdown";
+@import "./_index";
+@import "./_savedforlater";
+@import "./_contact";
+
+$headercolor: rgb(116, 112, 112);
+$buttoncolor: rgb(122, 97, 171);
+// this gives style to the whole page
+* {
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  color: rgb(124, 123, 123);
+}
+// an image for the background to the navbar and
+// main title is a photo of a shooting star I captured in France
+.main-header {
+  background-image: url(../Images/stars.png);
+  background-size: cover;
+  padding-bottom: 20px;
+}
+
+// formatting for links in my table
+.button-link {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: $buttoncolor;
+  border-radius: 5px;
+}
+html {
+  background-color: white;
+  body {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.main-nav {
+  text-align: center;
+  font-size: 1.4em;
+  font-weight: lighter;
+  border-bottom: 1px solid rgb(96, 94, 94);
+  li {
+    padding: 0 5%;
+  }
+}
+// Formatting for main nav bar at top of page
+.nav a {
+  display: inline-block;
+  padding: 1em;
+  color: white;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  background-color: rgb(73, 72, 72, 0.5);
+}
+
+.main-title {
+  text-align: center;
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+  color: rgb(186, 184, 184);
+
+  &.top {
+    font-size: 4em;
+  }
+}
+// formatting for the main part of the first two pages images and text
+.content-section {
+  margin: 1em auto;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .image-wrapper {
+    flex-basis: calc(25% - 20px);
+    border-radius: 10px;
+    border: 1px solid #aca3a3;
+    margin-bottom: 20px;
+    padding: 0;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px 10px 0 0;
+    }
+
+    h3,
+    p {
+      padding: 5% 5% 20% 5%;
+      margin: 0;
+      color: $headercolor;
+    }
+  }
+}
+
+.nav ul {
+  margin: 0;
+}
+
+.nav li {
+  display: inline;
+}
+
+h3 {
+  color: $headercolor;
+  padding: 1em 2em;
+  text-align: center;
+}
+h2 {
+  color: $headercolor;
+  text-align: center;
+}
+// formating for the footer
+.main-footer {
+  background-color: black;
+  color: white;
+  padding: 2em 0;
+  padding-top: 0.5em;
+  text-align: center;
+}
+// formatting for the footer button
+.btn-link {
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.8em;
+  cursor: pointer;
+  color: #fff;
+  background-color: $buttoncolor;
+  border-radius: 5px;
+
+  position: relative;
+  bottom: 0;
+}
+
+.btn-link:hover {
+  background-color: #2980b9;
+}
+
+.walking-buttons {
+  color: $buttoncolor;
+  text-decoration: none;
+  cursor: pointer;
+}
+// Formattig for the man part of the table
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+
+  .custom-table {
+    border-collapse: collapse;
+    text-align: center;
+
+    th {
+      font-weight: bold;
+      padding: 10px;
+      font-size: 1.2em;
+      width: 25%;
+    }
+
+    td {
+      padding: 10px;
+      border: 1px solid #ccc;
+      font-style: italic;
+    }
+  }
+}
+
+//save button styling
+
+.save-btn {
+  text-decoration: none;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #2980b9;
+  border-radius: 10px;
+}
+
+.save-btn:hover {
+  background-color: rgb(122, 97, 171);
+}

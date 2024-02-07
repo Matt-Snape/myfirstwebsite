@@ -1,0 +1,160 @@
+<!-- ○ Create a functional “Save for later” page for your website, where users can earmark articles, images, recipes, etc. in a personal folder to be able to go back and see them later.
+○ Each item/recipe/image, etc. must have the option to “Save for later”.
+○ When an item is added, an alert should tell the user how many items
+are in their “Save for later” folder.
+○ Create a new HTML page for the “Save for later” section, which allows
+the user to see what is in their folder.
+○ Create a form which allows a user to leave comments.
+○ Create forms to allow a user to “like” an item/article/etc.
+○ Create forms for if a person would like to contact you.
+○ Within the entirety of your site, you should have at least the following
+jQuery functionality:
+● A function which contains hiding/showing.
+● A drop-down menu.
+● Animation effects.
+● A function with chained effects. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <script
+      src="https://kit.fontawesome.com/99620259a0.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="scss/stylesheet.css" type="text/css" />
+    <title>Matt's world - Hello</title>
+  </head>
+  <body>
+    <!-- dropdown menu -->
+    <header class="main-header">
+      <nav class="nav main-nav">
+        <div class="dropdown">
+          <a href="#"><i class="fa-solid fa-bars fa-xl"></i></a>
+          <ul class="dropdown-content">
+            <li><a href="index.html">about me </a></li>
+            <li><a href="walking.html">walking </a></li>
+            <li><a href="contact.html">contact</a></li>
+            <li><a href="saved-for-later.html">saved for later</a></li>
+          </ul>
+        </div>
+      </nav>
+      <h1 class="main-title top">Matt's World</h1>
+    </header>
+
+    <!-- four columns with general information about me and my interests -->
+    <main>
+      <h2 id="mainTitle">A few things about me</h2>
+      <section class="content-section">
+        <div class="image-wrapper">
+          <img src="./Images/me.png" alt="Me with my cat" />
+          <h3>Hello!</h3>
+          <p>
+            Hi, I'm Matt; I'm a Chemistry and Physics teacher and head of
+            department who works in an 11-18 School in Cheshire. I am lucky
+            enough to have got married to a wonderful woman from the Netherlands
+            this year as well as moved house! It's been a busy year but I am
+            currently capping it off by branching out into the world of coding
+            by completing a course with Hyperiondev in Full Stack Web
+            Development and Software Engineering. In my free time I mainly enjoy
+            travel abroad to see family and for fun, seeing my nieces, nephews
+            and Godchildren, spending time with my cat Bob, gaming with friends
+            online, cooking and getting out into the great outdooors.
+          </p>
+          <div class="like-section">
+            <button class="like-btn" data-section="hello">
+              Likes
+              <span id="likeCount_hello">0 </span>
+            </button>
+          </div>
+        </div>
+
+        <div class="image-wrapper">
+          <img
+            class="mainimage"
+            src="./Images/bob.png"
+            alt="My cat plotting how to interrupt my work"
+          />
+          <h3>My cat</h3>
+          <p>
+            We have had Bob for just over a year now. I was resistant to the
+            idea of getting a cat at first because I was more of a dog person
+            but I was so wrong! Bob is great company when I'm doing my coding as
+            she sits on the windowsill and watches the world outside
+            occasionally jumping down for a cuddle... and to mess some of code
+            up. If you look closely at the picture here you can see her planning
+            the correct time to pounce!
+          </p>
+          <div class="like-section">
+            <button class="like-btn" data-section="cat">
+              Likes
+              <span id="likeCount_cat">0 </span>
+            </button>
+          </div>
+        </div>
+
+        <div class="image-wrapper">
+          <img class="mainimage" src="./Images/cooking.png" alt="Me cooking" />
+          <h3>Cooking</h3>
+          <p>
+            I really enjoy cooking, I find it cathartic and peaceful. I enjoy
+            putting a slow cook on and then going for a walk and coming back to
+            a hearty meal. This Christmas I cooked for twenty guests who were
+            all crammed in to our relatively small house... this was not so
+            relaxing and we had to use garden furniture but I still enjoyed it.
+          </p>
+          <div class="like-section">
+            <button class="like-btn" data-section="cooking">
+              Likes
+              <span id="likeCount_cooking">0 </span>
+            </button>
+          </div>
+        </div>
+
+        <div class="image-wrapper">
+          <img
+            class="mainimage"
+            src="./Images/amsterdam.png"
+            alt="Kings day in Amsterdam"
+          />
+          <h3>Travel</h3>
+          <p>
+            I have been lucky to travel to many places worldwide but perhaps my
+            highlight was when I took a group of students to do charity work in
+            Cambodia for a month. I also visit the Netherlands regularly to see
+            my wife's family and we have just booked to go to Amsterdam the
+            weekend of this year's king's day celebration and I am really
+            excited to go and see all the orange! A place I have always wanted
+            to visit is South Africa but I sadly can't afford to after my
+            wedding so will have to start saving again.
+          </p>
+          <h5>A few more countries I have visited</h5>
+          <ul>
+            <li>Greece</li>
+            <li>France</li>
+            <li>Panama</li>
+            <li>Eygpt</li>
+            <li>USA</li>
+            <li>Indonesia</li>
+          </ul>
+          <div class="like-section">
+            <button class="like-btn" data-section="travel">
+              Likes
+              <span id="likeCount_travel">0 </span>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- The footer is the same on other pages and links to contact page... 
+      link absent on contact page itself -->
+    <footer class="main-footer">
+      <h3>Matt's World</h3>
+      <a href="contact.html" class="btn-link">Subscribe for cat updates</a>
+    </footer>
+    <script src="Javascript/index.js"></script>
+  </body>
+</html>
